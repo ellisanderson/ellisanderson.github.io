@@ -1,0 +1,78 @@
+#design {
+  background-color: #56bfc9; }
+
+#music {
+  background-color: #333;
+  color: white; }
+
+.box {
+  height: 400px;
+  margin-bottom: 20px;
+  width: 50%;
+  background: pink; }
+
+#illustration {
+  background-color: #f2d441; }
+
+#comics {
+  background-color: #73605b;
+  color: white; }
+
+#cv {
+  background-color: #ed404e;
+  color: white; }
+
+#contact {
+  background-color: #681c2f;
+  color: white; }
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative; }
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 100;
+  letter-spacing: .2rem;
+  text-transform: uppercase; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 10px; }
+  header h1 {
+    margin-right: 15%; }
+
+.section-header {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
+  .section-header h2:last-child {
+    display: none; }
+
+.content {
+  display: none;
+  padding: 50px; }
+
+/*# sourceMappingURL=styles.css.map */

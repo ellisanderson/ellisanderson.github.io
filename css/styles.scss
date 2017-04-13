@@ -1,2 +1,70 @@
 @import "partials/_variables.scss";
 @import "partials/_mixins.scss";
+@import "partials/_design.scss";
+@import "partials/_music.scss";
+@import "partials/_illustration.scss";
+@import "partials/_comics.scss";
+@import "partials/_cv.scss";
+@import "partials/_contact.scss";
+
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  padding:10px;
+  max-width: 1200px;
+  margin:0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+h1{
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size:1.4rem;
+  font-weight: 100;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:0 0 10px;
+
+  h1{
+    margin-right: 15%;
+  }
+}
+
+.section-header{
+  padding: 30px 20px;
+  display:flex;
+  align-items:center;
+  display:flex;
+  justify-content:space-between;
+
+  h2:last-child{
+    display: none;
+  }
+}
+
+.content{
+  display: none;
+  padding:50px;
+}
