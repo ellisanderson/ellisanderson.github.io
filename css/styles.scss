@@ -38,7 +38,7 @@ h2{
 }
 
 h3{
-  font-size:1.2rem;
+  font-size:1.4rem;
   letter-spacing: .1rem;
   text-transform: uppercase;
 }
@@ -91,7 +91,8 @@ header{
 }
 
 .section-header{
-  padding: 20px 20px;
+  height: 50px;
+  padding: 0px 20px;
   display:flex;
   align-items:center;
   display:flex;
@@ -179,6 +180,7 @@ a{
 @media (min-width:767px) {
 
   header{
+
     .logo{
 
       img{
@@ -197,10 +199,10 @@ a{
 
   #back-to-top{
     width: 50px;
+    top:60px;
     right:30px;
-    bottom:50vh;
-
   }
+
 
   .project-list{
     ul{
@@ -216,8 +218,10 @@ a{
     display: flex;
   }
 
+
   .column{
     width:50%;
+    // padding-right:10%;
   }
 
   a{
@@ -227,6 +231,18 @@ a{
   }
 
 }
+
+
+// @media (min-width:1000px) {
+//   a{
+//     img{
+//       width: 85%;
+//     }
+//   }
+// }
+
+
+
 
 
 @media (min-width:1200px) {
@@ -243,6 +259,8 @@ a{
   }
 
   .section-header{
+    height: 70px;
+
     h2{
       font-size: 1.4rem;
     }

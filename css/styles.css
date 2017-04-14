@@ -52,7 +52,7 @@ h2 {
   text-transform: uppercase; }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: .1rem;
   text-transform: uppercase; }
 
@@ -91,7 +91,8 @@ header {
   padding: 0 30px 10px; }
 
 .section-header {
-  padding: 20px 20px;
+  height: 50px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   display: flex;
@@ -151,8 +152,8 @@ a img {
 
   #back-to-top {
     width: 50px;
-    right: 30px;
-    bottom: 50vh; }
+    top: 60px;
+    right: 30px; }
 
   .project-list ul a li {
     width: 50%; }
@@ -171,7 +172,9 @@ a img {
   header h2 {
     font-size: 1.4rem; }
 
-  .section-header h2 {
-    font-size: 1.4rem; } }
+  .section-header {
+    height: 70px; }
+    .section-header h2 {
+      font-size: 1.4rem; } }
 
 /*# sourceMappingURL=styles.css.map */

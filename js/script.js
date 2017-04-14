@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $('.section-header').click(function(){
     $(this).next().slideToggle(1000);
+    // $(this).next().toggle();
     $(this).children('.section-header h2:nth-child(2), .section-header h2:nth-child(3)').toggle();
     // $(this).parent().siblings().slideToggle();
   });
@@ -22,7 +23,7 @@ $(document).ready(function(){
     if ($(this).scrollTop() > 100) {
             $('#back-to-top').fadeIn("slow");
         } else {
-            $('#back-to-top').fadeOut("slow");
+            $('#back-to-top').fadeOut("fast");
         }
   });
 
