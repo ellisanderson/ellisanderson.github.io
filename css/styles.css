@@ -1,5 +1,6 @@
 #design {
-  background-color: #56bfc9; }
+  background-color: #56bfc9;
+  color: white; }
 
 #music {
   background-color: #333;
@@ -19,8 +20,7 @@
   color: white; }
 
 #cv {
-  background-color: #ed404e;
-  color: white; }
+  background-color: #f4606c; }
 
 #contact {
   background-color: #681c2f;
@@ -38,9 +38,7 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 10px;
   max-width: 1200px;
-  margin: 0 auto;
-  height: 100vh;
-  position: relative; }
+  margin: 0 auto; }
 
 h1 {
   font-size: 1.4rem;
@@ -54,11 +52,24 @@ h2 {
   letter-spacing: .2rem;
   text-transform: uppercase; }
 
+h3 {
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase; }
+
+p {
+  line-height: 1.9rem; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 10px; }
+  margin: 10px 0;
+  height: 70px; }
   header h1 {
     margin-right: 15%; }
 
@@ -67,12 +78,50 @@ header {
   display: flex;
   align-items: center;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  transition: background-color 2s ease-in-out; }
   .section-header h2:last-child {
     display: none; }
 
+#design:hover, #illustration:hover, #comics:hover, #music:hover, #cv:hover, #contact:hover {
+  background-color: red;
+  cursor: pointer; }
+
 .content {
-  display: none;
-  padding: 50px; }
+  display: none; }
+
+.project-list {
+  padding: 20px 0; }
+  .project-list ul {
+    overflow: hidden; }
+    .project-list ul a li {
+      width: 100%;
+      float: left;
+      padding: 15px 20px;
+      text-transform: uppercase;
+      transition: background-color .2s ease-in-out;
+      letter-spacing: .1rem; }
+    .project-list ul a li:hover {
+      background-color: #e9e5e4; }
+
+.column {
+  padding: 40px 20px;
+  width: 100%; }
+
+.image {
+  background-color: pink;
+  margin-bottom: 20px; }
+  .image img {
+    width: 100%; }
+
+@media (min-width: 767px) {
+  .project-list ul a li {
+    width: 50%; }
+
+  .project {
+    display: flex; }
+
+  .column {
+    width: 50%; } }
 
 /*# sourceMappingURL=styles.css.map */

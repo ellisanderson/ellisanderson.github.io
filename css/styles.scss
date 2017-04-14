@@ -23,8 +23,6 @@ body{
   padding:10px;
   max-width: 1200px;
   margin:0 auto;
-  height: 100vh;
-  position: relative;
 }
 
 h1{
@@ -41,11 +39,27 @@ h2{
   text-transform: uppercase;
 }
 
+h3{
+  font-size:1.2rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+
+p{
+  line-height: 1.9rem;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
 header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin:0 0 10px;
+  margin:10px 0;
+  height: 70px;
 
   h1{
     margin-right: 15%;
@@ -58,13 +72,101 @@ header{
   align-items:center;
   display:flex;
   justify-content:space-between;
+  transition: background-color 2s ease-in-out;
 
   h2:last-child{
     display: none;
   }
 }
 
+
+#design:hover, #illustration:hover, #comics:hover, #music:hover, #cv:hover, #contact:hover{
+  background-color: red;
+  cursor: pointer;
+}
+
+
 .content{
   display: none;
-  padding:50px;
+
+}
+
+.project-list{
+  padding:20px 0;
+
+  ul{
+    overflow: hidden;
+
+    a{
+
+      li{
+        width: 100%;
+        float:left;
+        padding:15px 20px;
+        text-transform: uppercase;
+        transition: background-color .2s ease-in-out;
+        letter-spacing: .1rem;
+      }
+
+      li:hover{
+        background-color: lighten($color3, 50%);
+      }
+    }
+  }
+}
+
+.project{
+
+}
+
+.column{
+  padding:40px 20px;
+  width:100%;
+}
+
+.image{
+  background-color: pink;
+  // height: 300px;
+  margin-bottom: 20px;
+
+  img{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+// MEDIA QUERIES______________________________________
+
+@media (min-width:767px) {
+
+  .project-list{
+    ul{
+      a{
+        li{
+          width:50%;
+        }
+      }
+    }
+  }
+
+  .project{
+    display: flex;
+  }
+
+  .column{
+    width:50%;
+  }
+
+}
+
+
+@media (min-width:982px) {
+  header{
+    // margin-top: 30px;
+  }
 }
