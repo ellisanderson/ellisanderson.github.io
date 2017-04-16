@@ -36,8 +36,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  height: 100vh; }
+  font-family: 'Roboto', sans-serif; }
 
 h1 {
   font-size: 1rem;
@@ -64,13 +63,12 @@ a {
   color: inherit; }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 30px auto 15px;
-  padding: 0 30px;
-  max-width: 1200px;
-  height: 50px; }
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 2; }
   header .logo {
     display: flex;
     align-items: center;
@@ -83,16 +81,29 @@ header {
       display: none; }
   header h2 {
     width: 200px;
-    text-align: right; }
+    text-align: left; }
+
+.logo:hover {
+  cursor: pointer; }
+
+.container {
+  height: 80px;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px; }
 
 .portfolio {
-  margin: 0 auto 70px;
+  margin: 80px auto 70px;
   max-width: 1200px;
-  padding: 0 30px 10px; }
+  padding: 0 15px 0px; }
 
 .section-header {
   height: 50px;
   padding: 0px 20px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   display: flex;
@@ -115,16 +126,19 @@ header {
   font-size: 2.5rem;
   display: none; }
 
+#back-to-top:hover {
+  cursor: pointer; }
+
 .content {
-  display: none; }
+  display: none;
+  width: 85%;
+  margin: 0 auto; }
 
 .project-list {
   padding: 20px 0; }
   .project-list ul {
     overflow: hidden; }
     .project-list ul a li {
-      width: 100%;
-      float: left;
       padding: 15px 20px;
       text-transform: uppercase;
       letter-spacing: .1rem; }
@@ -142,35 +156,56 @@ a img {
   width: 100%;
   margin-bottom: 20px; }
 
+#test-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  display: none; }
+
+.fixed-section {
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  left: 0; }
+
 @media (min-width: 767px) {
   header .logo img {
     display: none; }
   header .logo h1 {
     display: block; }
   header h2 {
-    width: 60%; }
-
-  #back-to-top {
-    width: 50px;
-    top: 60px;
-    right: 30px; }
+    width: 60%;
+    text-align: right; }
 
   .project-list ul a li {
-    width: 50%; }
+    width: 50%;
+    float: left; }
 
   .project {
     display: flex; }
 
   .column {
-    width: 50%; }
+    width: 50%;
+    padding-right: 5%; }
 
   a img {
-    width: 80%; } }
+    width: 95%; } }
 @media (min-width: 1200px) {
   header .logo h1 {
     font-size: 1.4rem; }
   header h2 {
     font-size: 1.4rem; }
+
+  #back-to-top {
+    width: 50px;
+    bottom: 30px;
+    right: 30px; }
+
+  .portfolio {
+    margin: 80px auto 30px; }
 
   .section-header {
     height: 70px; }
