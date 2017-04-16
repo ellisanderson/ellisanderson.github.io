@@ -3,7 +3,7 @@
   color: white; }
 
 #music {
-  background-color: #333;
+  background-color: #f4606c;
   color: white; }
 
 .box {
@@ -13,18 +13,19 @@
   background: pink; }
 
 #illustration {
-  background-color: #f2d441; }
+  background: #73605b;
+  color: white; }
 
 #comics {
   background-color: #73605b;
   color: white; }
 
 #cv {
-  background-color: #f4606c;
+  background-color: #333;
   color: white; }
 
 #contact {
-  background-color: #681c2f;
+  background-color: #db7337;
   color: white; }
 
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
@@ -69,22 +70,68 @@ header {
   position: fixed;
   top: 0;
   z-index: 2; }
-  header .logo {
+  header .left {
     display: flex;
     align-items: center;
     justify-content: center; }
-    header .logo img {
+    header .left img {
       height: 50px;
       margin-right: 10px; }
-    header .logo h1 {
-      font-weight: 900;
-      display: none; }
-  header h2 {
-    width: 200px;
-    text-align: left; }
+    header .left h1 {
+      font-weight: 400;
+      width: 100px; }
+    header .left h2 {
+      display: none;
+      margin-left: 20px; }
 
-.logo:hover {
+.right {
+  display: flex; }
+  .right #back-to-top2 {
+    height: 50px;
+    width: 50px;
+    background: #aaa;
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    display: none; }
+    .right #back-to-top2 .fa {
+      margin-top: 7px; }
+  .right #hamburger {
+    height: 50px;
+    width: 50px;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.right:hover {
   cursor: pointer; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  display: none;
+  align-items: center;
+  justify-content: center; }
+  .modal .modal-menu {
+    background: white;
+    text-align: center;
+    padding: 30px; }
+  .modal li {
+    line-height: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 10px; }
+  .modal li:hover {
+    color: grey; }
+
+.flex {
+  display: flex; }
 
 .container {
   height: 80px;
@@ -114,56 +161,30 @@ header {
 .section-header:hover {
   cursor: pointer; }
 
-#back-to-top {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  z-index: 1;
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-size: 2.5rem;
-  display: none; }
-
-#back-to-top:hover {
-  cursor: pointer; }
-
 .content {
   display: none;
-  width: 85%;
   margin: 0 auto; }
 
 .project-list {
   padding: 20px 0; }
   .project-list ul {
-    overflow: hidden; }
+    overflow: hidden;
+    text-align: center; }
     .project-list ul a li {
-      padding: 15px 20px;
+      padding: 10px;
+      margin: 0 10px;
       text-transform: uppercase;
       letter-spacing: .1rem; }
     .project-list ul a li:hover {
-      background-color: #e9e5e4; }
-
-.project {
-  padding: 20px 0; }
+      color: grey; }
 
 .column {
-  padding: 40px 20px;
+  padding: 50px 15px;
   width: 100%; }
 
 a img {
   width: 100%;
   margin-bottom: 20px; }
-
-#test-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background-color: pink;
-  display: none; }
 
 .fixed-section {
   position: fixed;
@@ -172,44 +193,26 @@ a img {
   left: 0; }
 
 @media (min-width: 767px) {
-  header .logo img {
-    display: none; }
-  header .logo h1 {
+  header .left h2 {
     display: block; }
-  header h2 {
-    width: 60%;
-    text-align: right; }
 
   .project-list ul a li {
-    width: 50%;
-    float: left; }
+    display: inline-block; }
 
   .project {
     display: flex; }
 
   .column {
     width: 50%;
-    padding-right: 5%; }
-
-  a img {
-    width: 95%; } }
+    padding-right: 7.5%; } }
 @media (min-width: 1200px) {
-  header .logo h1 {
-    font-size: 1.4rem; }
   header h2 {
     font-size: 1.4rem; }
-
-  #back-to-top {
-    width: 50px;
-    bottom: 30px;
-    right: 30px; }
 
   .portfolio {
     margin: 80px auto 30px; }
 
-  .section-header {
-    height: 70px; }
-    .section-header h2 {
-      font-size: 1.4rem; } }
+  .section-header h2 {
+    font-size: 1.4rem; } }
 
 /*# sourceMappingURL=styles.css.map */
