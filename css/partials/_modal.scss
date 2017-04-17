@@ -1,0 +1,60 @@
+.remodal-wrapper{
+  padding: 0;
+}
+
+.remodal{
+  min-height: 100vh;
+  margin:0;
+  padding:0;
+  padding-bottom: 50px;
+  max-width: 100%;
+  text-align: left;
+
+
+  .modal-content{
+    overflow: hidden;
+
+
+    .column{
+      float: left;
+      padding:80px 50px 0px;
+      width:100%;
+
+      a{
+        img{
+          width: 100%;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+.remodal-close:before{
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  line-height: 1rem;
+  padding: 20px;
+}
+
+.modal-content{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+
+@media (min-width:1000px) {
+  .remodal{
+    .modal-content{
+      .column{
+        width: 50%;
+      }
+    }
+  }
+}

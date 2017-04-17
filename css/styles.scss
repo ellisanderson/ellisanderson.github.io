@@ -6,7 +6,7 @@
 @import "partials/_comics.scss";
 @import "partials/_cv.scss";
 @import "partials/_contact.scss";
-
+@import "partials/_modal.scss";
 
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
   margin:0;
@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
 
 body{
   font-family: 'Roboto', sans-serif;
+  // background-color: pink;
 }
 
 h1{
@@ -81,6 +82,10 @@ header{
     }
   }
 
+  .left:hover{
+    cursor: pointer;
+  }
+
   // .hamburger{
   //   padding: 10px 0;
   //   height: 50px;
@@ -104,8 +109,8 @@ header{
   #back-to-top2{
     height: 50px;
     width: 50px;
-    background: #aaa;
-    color: black;
+    background: black;
+    color: white;
     text-align: center;
     font-size:2rem;
     display: none;
@@ -142,6 +147,7 @@ header{
   display: none;
   align-items: center;
   justify-content: center;
+  overflow: auto;
 
 
   .modal-menu{
@@ -182,19 +188,22 @@ header{
 }
 
 .portfolio{
-  margin:80px auto 70px;
+  margin:80px auto 10px;
   max-width: 1200px;
   padding:0 15px 0px;
 }
 
 .section-header{
-  height: 50px;
-  padding: 0px 20px;
+  height: 15vh;
   padding: 0 15px;
   display:flex;
   align-items:center;
   display:flex;
   justify-content:space-between;
+
+  h2{
+    font-size: 1.5rem;
+  }
 
   h2:last-child{
     display: none;
@@ -207,89 +216,33 @@ header{
 }
 
 
-// #back-to-top{
-//   position: fixed;
-//   bottom:0;
-//   width: 100%;
-//   height:50px;
-//   z-index: 1;
-//   text-align: center;
-//   font-size:2.5rem;
-//   display: none;
-//
-//   #to-top-container{
-//     margin:0 auto;
-//     max-width: 1200px;
-//     position: relative;
-//
-//     #to-top-trigger{
-//       position: absolute;
-//       background-color: black;
-//       color:white;
-//       width: 100%;
-//       height: 50px;
-//     }
-//
-//     #to-top-trigger:hover{
-//       cursor: pointer;
-//     }
-//   }
-// }
-
-
 .content{
   display: none;
   margin:0 auto;
 }
 
 .project-list{
-  padding:20px 0;
+  overflow: hidden;
+  padding: 20px 0;
 
-  ul{
-    overflow: hidden;
-    text-align: center;
-
-    a{
-
-      li{
-        padding:10px;
-        margin: 0 10px;
-        text-transform: uppercase;
-        letter-spacing: .1rem;
-      }
-
-      li:hover{
-        color:grey;
-        // border-left: 2px solid black;
-        // background-color: lighten($color3, 50%);
-      }
-    }
-  }
-}
-
-.project{
-  // padding:20px 0;
-}
-
-.column{
-  padding:50px 15px;
-  width:100%;
-}
-
-a{
-  img{
+  .project{
     width: 100%;
-    margin-bottom:20px;
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .1rem;
+    text-align: center;
+    padding:20px;
+    transition: background-color .2s ease-in-out;
+    text-transform: uppercase;
+  }
+
+  .project:hover{
+    background:rgba(0,0,0,.1);
   }
 }
 
-
-.fixed-section{
-  position:fixed;
-  width: 100%;
-  top: 80px;
-  left: 0;
-}
 
 
 
@@ -337,12 +290,11 @@ a{
 
 
   .project-list{
-    ul{
-      a{
-        li{
-          display: inline-block;
-        }
-      }
+    // padding:0;
+
+    .project{
+      width: 33.333%;
+      float: left;
     }
   }
 
@@ -350,11 +302,6 @@ a{
     display: flex;
   }
 
-
-  .column{
-    width:50%;
-    padding-right:7.5%;
-  }
 
 }
 
@@ -368,6 +315,12 @@ a{
   //   bottom:30px;
   //   right: 30px;
   // }
+
+  .column{
+    width:50%;
+    // padding:10vh 30px 0px;
+    // padding-right:7.5%;
+  }
 }
 
 
@@ -383,7 +336,7 @@ a{
     }
 
     h2{
-      font-size:1.4rem;
+      // font-size:1.4rem;
     }
   }
 
@@ -410,7 +363,7 @@ a{
     // height: 70px;
 
     h2{
-      font-size: 1.4rem;
+      // font-size: 1.4rem;
     }
   }
 }
