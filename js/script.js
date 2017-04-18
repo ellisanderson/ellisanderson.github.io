@@ -14,6 +14,13 @@ $(document).ready(function(){
 
 
 
+$(document).ready(function(){
+  $('#light-switch').click(function(){
+    $('body, header').toggleClass('black');
+    $('.fa-moon-o, .fa-sun-o').toggle();
+  });
+});
+
 
 
 
@@ -79,7 +86,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 80) {
+    if ($(this).scrollTop() > 1) {
             $('#back-to-top2').fadeIn("slow");
         } else {
             $('#back-to-top2').fadeOut("fast");
