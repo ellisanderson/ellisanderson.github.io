@@ -1,12 +1,8 @@
 $(document).ready(function(){
   $('.section-header').click(function(){
-    $(this).next().slideToggle('fast');
-    // $(this).next().toggle();
+    $(this).next().slideToggle(500);
     $(this).children('.section-header h2:nth-child(3), .section-header h2:nth-child(4)').toggle();
-    // $(this).parent().siblings().slideToggle();
-    // $(this).toggleClass('fixed-section');
-    // $('header').toggleClass('fixed-header');
-    // $(this).toggleClass('collapse');
+    $(this).toggleClass('black italic');
   });
 });
 
@@ -16,25 +12,11 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('#light-switch').click(function(){
-    $('body, header').toggleClass('black');
-    $('.fa-moon-o, .fa-sun-o').toggle();
+    $('body').toggleClass('black');
+    $('header').toggleClass('transparent');
+    $('.orbs, .portfolio, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
   });
 });
-
-
-
-
-// This was to try and make the section headers fixed position on scroll
-// $(document).ready(function(){
-//   $(window).scroll(function(){
-//       if ($(this).scrollTop() > 0) {
-//           $('#design').addClass('fixed-section');
-//       } else {
-//           $('#design').removeClass('fixed-section');
-//       }
-//   });
-// });
-
 
 
 
@@ -44,35 +26,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   window.sr = ScrollReveal();
-  sr.reveal('.section-header', { duration: 1500 });
+  sr.reveal('.section-header', { duration: 2000 });
 });
-
-
-
-
-
-
-
-
-//
-// $(document).ready(function(){
-//
-//   $(window).scroll(function() {
-//     if ($(this).scrollTop() > 100) {
-//             $('#back-to-top').fadeIn("slow");
-//         } else {
-//             $('#back-to-top').fadeOut("fast");
-//         }
-//   });
-//
-//   $('#to-top-trigger').click(function () {
-//         $("html, body").animate({
-//             scrollTop: 0
-//         }, 600);
-//         return false;
-//     });
-// });
-
 
 
 
@@ -110,8 +65,11 @@ $(document).ready(function(){
   $('.left').click(function(){
     // Slide everything up to show original menu
     $('.content').slideUp('slow');
+    // Toggle down/up arrows
     $('.section-header h2:nth-child(3)').show();
     $('.section-header h2:nth-child(4)').hide();
+    // Remove black class
+    $('.section-header').removeClass('black italic');
   });
 });
 

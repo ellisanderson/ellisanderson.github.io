@@ -7,6 +7,7 @@
 @import "partials/_cv.scss";
 @import "partials/_contact.scss";
 @import "partials/_modal.scss";
+@import "partials/_about.scss";
 
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
   margin:0;
@@ -20,10 +21,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
 
 body{
   font-family: 'Roboto', sans-serif;
-  // background: linear-gradient(to bottom, black, white);
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // height: 100vh;
+  // transition: background-color .3s ease-in-out;
 }
 
 h1{
@@ -47,7 +45,8 @@ h3{
 }
 
 p{
-  line-height: 2rem;
+  line-height: 1.6rem;
+  font-size: 1rem;
 }
 
 a{
@@ -55,14 +54,19 @@ a{
   color:inherit;
 }
 
+a:hover{
+  color:$color9;
+}
+
 
 
 
 .orbs{
+  display: none;
   height: 100vh;
   width: 100%;
   position: fixed;
-  top:10vh;
+  top:-50px;
   z-index: -1;
 }
 
@@ -72,14 +76,33 @@ a{
   color:white;
 }
 
+.italic{
+  font-style: italic;
+}
+
+.transparent{
+  background-color: transparent;
+}
+
 header{
-  // height: 80px;
-  // margin-top:20px;
+  height: 100px;
+  // padding-top:20px;
+  // transition: background-color .3s ease-in-out;
   width: 100%;
   background-color: white;
   position: fixed;
   top:0;
   z-index: 2;
+
+  .container{
+    height: 80px;
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 15px ;
+  }
 
   .left{
     display: flex;
@@ -107,34 +130,13 @@ header{
     h1{
       font-weight: 400;
       width: 100px;
-      // display: none;
-    }
-
-    h2{
       display: none;
-      margin-left: 20px;
     }
   }
 
   .left:hover{
     cursor: pointer;
   }
-
-  // .hamburger{
-  //   padding: 10px 0;
-  //   height: 50px;
-  //   width: 50px;
-  //   background-color: white;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-around;
-  //   flex-direction: column;
-  //
-  //   .line{
-  //     width: 30px;
-  //     border-top: 3px solid black;
-  //   }
-  // }
 }
 
 .right{
@@ -157,18 +159,23 @@ header{
 
 
   #light-switch{
-    border: 2px solid white;
+    overflow: hidden;
+    // border: 2px solid white;
     width: 52px;
     height: 52px;
-    background-color: black;
+    // background-color: black;
     color:white;
-    margin-left: 10px;
+    margin-left: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
 
     .fa-sun-o{
+      display: none;
+    }
+
+    #eye2{
       display: none;
     }
   }
@@ -178,70 +185,27 @@ header{
   cursor: pointer;
 }
 
-
-// .modal{
-//   position: fixed;
-//   top:0;
-//   width: 100%;
-//   height: 100vh;
-//   background-color: rgba(0,0,0,.8);
-//   z-index:3;
-//   display: none;
-//   align-items: center;
-//   justify-content: center;
-//   overflow: auto;
-//
-//
-//   .modal-menu{
-//     background: white;
-//     text-align: center;
-//     padding: 30px;
-//   }
-//
-//   li{
-//     line-height: 2rem;
-//     text-transform: uppercase;
-//     letter-spacing: .1rem;
-//     padding:10px;
-//   }
-//
-//   li:hover{
-//     color:grey;
-//   }
-//
-// }
-
 .flex{
   display: flex;
 }
 
 
-
-
-
-.container{
-  height: 80px;
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding:0 15px ;
-}
-
 .portfolio{
-  margin:80px auto 10px;
-  max-width: 1200px;
+  margin:100px auto 10px;
+  max-width: 900px;
   padding:0 15px 0px;
 }
 
 .section-header{
-  height: 15vh;
+  height: 12vh;
   padding: 0 15px;
   display:flex;
   align-items:center;
   display:flex;
   justify-content:space-between;
+  // flex-direction: column;
+  border-bottom:1px solid black;
+  transition: background-color .2s ease-in-out;
 
   h2{
     font-size: 1.5rem;
@@ -250,6 +214,10 @@ header{
   h2:last-child{
     display: none;
   }
+}
+
+.section-header:last-of-type{
+  border:none;
 }
 
 
@@ -261,31 +229,34 @@ header{
 .content{
   display: none;
   margin:0 auto;
+  padding:20px 0;
+
 }
 
 .project-list{
   overflow: hidden;
-  padding: 20px 0;
+  // margin: 20px 0;
 
   .project{
     width: 100%;
-    height:80px;
+    height:60px;
     display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: .1rem;
     text-align: center;
-    padding:20px;
-    transition: color .2s ease-in-out;
+    padding:10px;
     text-transform: uppercase;
     line-height: 1.3rem;
   }
 
   .project:hover{
-    // background:rgba(0,0,0,.1);
-    color:grey;
+    color:$color9;
   }
 }
+
+
+
 
 
 
@@ -304,45 +275,26 @@ header{
 @media (min-width:767px) {
 
   header{
+    padding-top: 20px;
 
     .left{
-
-      img{
-        // display: none;
-      }
-
       h1{
-        // display: block;
-        // width: auto;
-        // font-weight: 900;
-      }
-
-      h2{
         display: block;
       }
     }
-
-    .right{
-      // padding:0;
-    }
   }
 
-  .container{
-    // padding: 0 30px;
+  .portfolio{
+    margin-top: 120px;
   }
-
 
   .project-list{
-    // padding:0;
-
     .project{
+      padding:50px;
+      height: 80px;
       width: 33.333%;
       float: left;
     }
-  }
-
-  .project{
-    display: flex;
   }
 
 
@@ -353,17 +305,7 @@ header{
 
 
 @media (min-width:1000px) {
-  // #back-to-top{
-  //   width: 50px;
-  //   bottom:30px;
-  //   right: 30px;
-  // }
 
-  .column{
-    width:50%;
-    // padding:10vh 30px 0px;
-    // padding-right:7.5%;
-  }
 }
 
 
@@ -399,7 +341,7 @@ header{
   // }
 
   .portfolio{
-    margin:80px auto 30px;
+    // margin:100px auto 30px;
   }
 
   .section-header{

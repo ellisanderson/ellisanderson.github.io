@@ -1,32 +1,9 @@
-#design {
-  background-color: #56bfc9;
-  color: black; }
-
-#music {
-  background-color: #f4606c;
-  color: black; }
-
-.box {
-  height: 400px;
-  margin-bottom: 20px;
-  width: 100%;
-  background: pink; }
-
-#illustration {
-  background: #73605b;
-  color: white; }
-
 #comics {
   background-color: #73605b;
   color: white; }
 
-#cv {
-  background-color: #333;
-  color: white; }
-
-#contact {
-  background-color: #f2d441;
-  color: black; }
+.remodal-overlay {
+  background-color: rgba(0, 0, 0, 0.6); }
 
 .remodal-wrapper {
   padding: 0; }
@@ -35,19 +12,24 @@
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  padding-bottom: 50px;
-  max-width: 100%;
+  max-width: 1024px;
   text-align: left;
   color: black; }
   .remodal .modal-content {
-    overflow: hidden; }
-    .remodal .modal-content .column {
-      float: left;
-      padding: 80px 50px 0px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 100px 30px 0px; }
+    .remodal .modal-content a {
+      color: #ff3333;
+      font-weight: 900; }
+    .remodal .modal-content .column-left {
+      padding-bottom: 30px;
       width: 100%; }
-      .remodal .modal-content .column a img {
+    .remodal .modal-content .column-right {
+      width: 100%; }
+      .remodal .modal-content .column-right img {
         width: 100%;
-        margin-bottom: 40px; }
+        padding-bottom: 30px; }
 
 .remodal-close:before {
   font-size: 3rem;
@@ -56,13 +38,23 @@
   line-height: 1rem;
   padding: 20px; }
 
-.modal-content {
-  max-width: 1200px;
-  margin: 0 auto; }
+@media (min-width: 767px) {
+  .remodal .modal-content {
+    padding: 100px 50px 0; }
+    .remodal .modal-content .column-left {
+      float: left;
+      width: 65%;
+      padding-right: 50px; }
+    .remodal .modal-content .column-right {
+      float: right;
+      width: 35%; } }
+.portrait {
+  width: 100%;
+  height: 350px;
+  background-image: url("../images/portrait.jpg");
+  background-size: cover;
+  background-position: 50% 40%; }
 
-@media (min-width: 1000px) {
-  .remodal .modal-content .column {
-    width: 50%; } }
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
   margin: 0;
   padding: 0;
@@ -92,29 +84,49 @@ h3 {
   text-transform: uppercase; }
 
 p {
-  line-height: 2rem; }
+  line-height: 1.6rem;
+  font-size: 1rem; }
 
 a {
   text-decoration: none;
   color: inherit; }
 
+a:hover {
+  color: #ff3333; }
+
 .orbs {
+  display: none;
   height: 100vh;
   width: 100%;
   position: fixed;
-  top: 10vh;
+  top: -50px;
   z-index: -1; }
 
 .black {
   background-color: black;
   color: white; }
 
+.italic {
+  font-style: italic; }
+
+.transparent {
+  background-color: transparent; }
+
 header {
+  height: 100px;
   width: 100%;
   background-color: white;
   position: fixed;
   top: 0;
   z-index: 2; }
+  header .container {
+    height: 80px;
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px; }
   header .left {
     display: flex;
     align-items: center;
@@ -135,10 +147,8 @@ header {
         border-bottom: 2px solid white; }
     header .left h1 {
       font-weight: 400;
-      width: 100px; }
-    header .left h2 {
-      display: none;
-      margin-left: 20px; }
+      width: 100px;
+      display: none; }
   header .left:hover {
     cursor: pointer; }
 
@@ -156,17 +166,18 @@ header {
     .right #back-to-top2 .fa {
       margin-top: 7px; }
   .right #light-switch {
-    border: 2px solid white;
+    overflow: hidden;
     width: 52px;
     height: 52px;
-    background-color: black;
     color: white;
-    margin-left: 10px;
+    margin-left: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem; }
     .right #light-switch .fa-sun-o {
+      display: none; }
+    .right #light-switch #eye2 {
       display: none; }
 
 .right:hover {
@@ -175,72 +186,65 @@ header {
 .flex {
   display: flex; }
 
-.container {
-  height: 80px;
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 15px; }
-
 .portfolio {
-  margin: 80px auto 10px;
-  max-width: 1200px;
+  margin: 100px auto 10px;
+  max-width: 900px;
   padding: 0 15px 0px; }
 
 .section-header {
-  height: 15vh;
+  height: 12vh;
   padding: 0 15px;
   display: flex;
   align-items: center;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  transition: background-color .2s ease-in-out; }
   .section-header h2 {
     font-size: 1.5rem; }
   .section-header h2:last-child {
     display: none; }
+
+.section-header:last-of-type {
+  border: none; }
 
 .section-header:hover {
   cursor: pointer; }
 
 .content {
   display: none;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 20px 0; }
 
 .project-list {
-  overflow: hidden;
-  padding: 20px 0; }
+  overflow: hidden; }
   .project-list .project {
     width: 100%;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: .1rem;
     text-align: center;
-    padding: 20px;
-    transition: color .2s ease-in-out;
+    padding: 10px;
     text-transform: uppercase;
     line-height: 1.3rem; }
   .project-list .project:hover {
-    color: grey; }
+    color: #ff3333; }
 
 @media (min-width: 767px) {
-  header .left h2 {
-    display: block; }
+  header {
+    padding-top: 20px; }
+    header .left h1 {
+      display: block; }
+
+  .portfolio {
+    margin-top: 120px; }
 
   .project-list .project {
+    padding: 50px;
+    height: 80px;
     width: 33.333%;
-    float: left; }
-
-  .project {
-    display: flex; } }
-@media (min-width: 1000px) {
-  .column {
-    width: 50%; } }
-@media (min-width: 1200px) {
-  .portfolio {
-    margin: 80px auto 30px; } }
+    float: left; } }
 
 /*# sourceMappingURL=styles.css.map */
