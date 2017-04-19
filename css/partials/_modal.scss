@@ -1,5 +1,6 @@
 .remodal-overlay{
-  background-color: rgba(0,0,0,.6);
+  // background-color: rgba(0,0,0,.6);
+  background-color: white;
 }
 
 .remodal-wrapper{
@@ -18,7 +19,12 @@
   .modal-content{
     overflow: hidden;
     margin: 0 auto;
-    padding:100px 30px 0px;
+    padding:100px 30px 10px;
+
+    h1{
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
 
     a{
       color:$color9;
@@ -36,7 +42,8 @@
 
       img{
         width: 100%;
-        padding-bottom:30px;
+        margin-bottom:20px;
+        border: 1px solid #ddd;
       }
     }
   }
@@ -58,7 +65,11 @@
 @media (min-width:767px) {
   .remodal{
     .modal-content{
-      padding:100px 50px 0;
+      padding:100px 50px 10px;
+
+      h1{
+        font-size: 3rem;
+      }
 
       .column-left{
         float:left;
