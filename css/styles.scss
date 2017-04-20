@@ -205,7 +205,7 @@ header{
   transition: background-color .2s ease-in-out;
 
   h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   h2:last-child{
@@ -305,6 +305,12 @@ header{
       h1{
         display: block;
       }
+    }
+  }
+
+  .section-header{
+    h2{
+      font-size: 1.5rem;
     }
   }
 

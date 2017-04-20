@@ -16,8 +16,12 @@
     margin: 0 auto;
     padding: 100px 30px 10px; }
     .remodal .modal-content h1 {
+      margin: 0 auto;
+      text-align: center;
       font-size: 1.5rem;
       font-weight: 100; }
+      .remodal .modal-content h1 span {
+        color: #ff3333; }
     .remodal .modal-content a {
       color: #ff3333;
       font-weight: 900; }
@@ -42,6 +46,7 @@
   .remodal .modal-content {
     padding: 100px 50px 10px; }
     .remodal .modal-content h1 {
+      max-width: 700px;
       font-size: 3rem; }
     .remodal .modal-content .column-left {
       float: left;
@@ -195,7 +200,7 @@ header {
   border-bottom: 1px solid black;
   transition: background-color .2s ease-in-out; }
   .section-header h2 {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .section-header h2:last-child {
     display: none; }
 
@@ -247,6 +252,9 @@ header {
     padding-top: 20px; }
     header .left h1 {
       display: block; }
+
+  .section-header h2 {
+    font-size: 1.5rem; }
 
   .portfolio {
     margin-top: 120px; }

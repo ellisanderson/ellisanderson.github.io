@@ -14,7 +14,7 @@ $(document).ready(function(){
   $('#light-switch').click(function(){
     $('body').toggleClass('black');
     $('header').toggleClass('transparent');
-    $('.orbs, .portfolio, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
+    $('.orbs, .portfolio, .logo, h1, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
   });
 });
 
