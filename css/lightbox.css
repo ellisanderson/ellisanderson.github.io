@@ -110,6 +110,7 @@ body.lb-disable-scrolling {
   left: 0;
   float: left;
   /*background: url(../images/prev.png) left 48% no-repeat;*/
+  background-size: 20px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -128,6 +129,7 @@ body.lb-disable-scrolling {
   right: 0;
   float: right;
   /*background: url(../images/next.png) right 48% no-repeat;*/
+  background-size: 20px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -192,19 +194,36 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-close {
-  display: none;
   float: right;
-  width: 30px;
-  height: 30px;
-  background: url(../images/close.png) top right no-repeat;
+  /*width: 30px;*/
+  /*height: 30px;*/
+  /*background: url(../images/close.png) top right no-repeat;*/
   text-align: right;
   outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  padding:20px;
+  margin-top: 10px;
+  background-color: #ff3333;
+  /*filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s;*/
+}
+
+
+.lb-data .lb-close:after{
+  content: "close";
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  color:white;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.lb-data .lb-close:hover{
+  background-color: black;
 }
 
 .lb-data .lb-close:hover {

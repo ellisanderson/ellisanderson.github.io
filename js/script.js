@@ -14,7 +14,7 @@ $(document).ready(function(){
   $('#light-switch').click(function(){
     $('body').toggleClass('black');
     $('header').toggleClass('transparent');
-    $('.orbs, .portfolio, .logo, h1, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
+    $('.orbs, .walking, .portfolio,  h1, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
   });
 });
 
@@ -76,30 +76,64 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-
-  var modal = document.querySelector('.modal');
-  var btn = document.querySelector('#hamburger');
-
-  btn.onclick = function() {
-    modal.style.display = "flex";
-  }
-
-  window.onclick = function(event){
-    if(event.target == modal){
-      modal.style.display = "none";
-    };
-  };
-});
-
-
+// $(document).ready(function(){
+//
+//   var modal = document.querySelector('.modal');
+//   var btn = document.querySelector('#hamburger');
+//
+//   btn.onclick = function() {
+//     modal.style.display = "flex";
+//   }
+//
+//   window.onclick = function(event){
+//     if(event.target == modal){
+//       modal.style.display = "none";
+//     };
+//   };
+// });
 
 
 
 
 
+// MY LIGHTBOX SCRIPT (DOESN'T WORK!!!!)
+// $(document).ready(function(){
+//
+//   $('.lightbox_trigger').click(function(e){
+//
+//     e.preventDefault();
+//
+//     var image_href = $(this).attr("href");
+//
+//     if($('#mylightbox').length > 0){
+//       $('#content').html('<img src=' + image_href + '" />');
+//
+//       $('#mylightbox').show();
+//     }
+//
+//     else{
+//       var lightbox =
+//       '<div id="mylightbox">' + '<p>Click to close</p>' + '<div id="content">' + '<img src="' + image_href + '" />' + '</div>';
+//
+//       $('body').append(lightbox);
+//     }
+//
+//     console.log('hey');
+//
+//   });
+//
+//   $('#mylightbox').on('click', function(){
+//     $('#mylightbox').hide();
+//   });
+// });
 
 
+
+
+
+
+
+// ----------------------------------------------------------------
 
 
 $(document).ready(function(){
@@ -118,30 +152,30 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-
-  $('#co').click(function() {
-    $('html, body').animate({
-            scrollTop: $('#coffee').offset().top -80
-          }, 700);
-  });
-
-  $('#gr').click(function() {
-    $('html, body').animate({
-            scrollTop: $('#goodreads').offset().top -80
-          }, 700);
-  });
-
-  $('#np').click(function() {
-    $('html, body').animate({
-            scrollTop: $('#nonprofit').offset().top -80
-          }, 700);
-  });
-
-  $('#tu').click(function() {
-    $('html, body').animate({
-            scrollTop: $('#third-uncle').offset().top -80
-          }, 700);
-  });
-
-});
+// $(document).ready(function(){
+//
+//   $('#co').click(function() {
+//     $('html, body').animate({
+//             scrollTop: $('#coffee').offset().top -80
+//           }, 700);
+//   });
+//
+//   $('#gr').click(function() {
+//     $('html, body').animate({
+//             scrollTop: $('#goodreads').offset().top -80
+//           }, 700);
+//   });
+//
+//   $('#np').click(function() {
+//     $('html, body').animate({
+//             scrollTop: $('#nonprofit').offset().top -80
+//           }, 700);
+//   });
+//
+//   $('#tu').click(function() {
+//     $('html, body').animate({
+//             scrollTop: $('#third-uncle').offset().top -80
+//           }, 700);
+//   });
+//
+// });
