@@ -203,6 +203,7 @@ body.lb-disable-scrolling {
   padding:20px;
   margin-top: 10px;
   background-color: #ff3333;
+  transition: background-color .2s ease-in-out;
   /*filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
   -webkit-transition: opacity 0.2s;
@@ -217,7 +218,7 @@ body.lb-disable-scrolling {
   position: relative;
   font-family: 'Roboto', sans-serif;
   color:white;
-  font-weight: 100;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .1rem;
 }

@@ -29,9 +29,26 @@
       padding-bottom: 30px;
       width: 100%; }
     .remodal .modal-content .column-right {
-      width: 100%; }
+      width: 100%;
+      overflow: hidden; }
       .remodal .modal-content .column-right img {
-        width: 100%;
+        width: 98%;
+        float: left;
+        margin: 1%;
+        margin-bottom: 20px;
+        border: 1px solid #ddd; }
+    .remodal .modal-content .column-right2 {
+      width: 100%;
+      overflow: hidden; }
+      .remodal .modal-content .column-right2 a:nth-of-type(1) img {
+        width: 98%;
+        margin: 1%;
+        margin-bottom: 20px;
+        border: none; }
+      .remodal .modal-content .column-right2 img {
+        width: 48%;
+        float: left;
+        margin: 1%;
         margin-bottom: 20px;
         border: 1px solid #ddd; }
 
@@ -54,7 +71,7 @@
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 400;
   outline: none;
   transition: background-color .2s ease-in-out; }
 
@@ -73,7 +90,7 @@
       float: left;
       width: 65%;
       padding-right: 50px; }
-    .remodal .modal-content .column-right {
+    .remodal .modal-content .column-right, .remodal .modal-content .column-right2 {
       float: right;
       width: 35%; } }
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
