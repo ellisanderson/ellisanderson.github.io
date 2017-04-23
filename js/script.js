@@ -1,4 +1,10 @@
 $(document).ready(function(){
+  $('section').fadeIn(2000).css('display','block');
+});
+
+
+
+$(document).ready(function(){
   $('.section-header').click(function(){
     // Open this section, close all other sections
     $(this).next().slideToggle(500);
@@ -29,12 +35,10 @@ $(document).ready(function(){
 
 
 
-
-
-$(document).ready(function(){
-  window.sr = ScrollReveal();
-  sr.reveal('.section-header', { duration: 2000 });
-});
+// $(document).ready(function(){
+//   window.sr = ScrollReveal();
+//   sr.reveal('section', { duration: 2000 });
+// });
 
 
 
