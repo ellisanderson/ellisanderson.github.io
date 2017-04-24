@@ -21,14 +21,6 @@
     margin: 0 auto;
     padding:30px 30px 10px;
 
-    .background-image{
-      width: 60%;
-      max-width: 400px;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 3vh;
-    }
-
     h1{
       // margin: 0 5%;
       text-align: center;
@@ -149,6 +141,88 @@
 }
 
 
+.face-animation{
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  height: 80vh;
+
+  .ellis-face{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: .2;
+    animation-name:face;
+    animation-duration: 16s;
+  }
+
+  .text{
+    position: absolute;
+    height: 80vh;
+    width:80%;
+    left:10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+      // margin: auto;
+      // position: absolute;
+      // right:0;
+      // left: 0;
+      // bottom: 0;
+      background-color: $color9;
+      padding:30px 40px;
+      font-size: 1.1rem;
+      color: white;
+      max-width: 500px;
+      line-height: 1.7rem;
+      transition: background-color .2s ease-in-out;
+
+
+      span{
+        text-transform: none;
+      }
+    }
+
+    .first{
+      display: none;
+    }
+
+    .second{
+      display: none;
+    }
+
+    .first:hover{
+      cursor: pointer;
+      background-color: black;
+    }
+  }
+
+}
+
+
+@keyframes face {
+  0%{
+    opacity: 1;
+  }
+
+  12%{
+    opacity: 1;
+  }
+
+  18%{
+    opacity: .2;
+  }
+
+  100%{
+    opacity: .2;
+  }
+}
+
+
+
 
 
 
@@ -178,6 +252,13 @@
         img{
           width: 48%;
         }
+      }
+    }
+
+    .face-animation{
+      .ellis-face{
+        width: 75%;
+        left:12.5%;
       }
     }
   }

@@ -15,12 +15,6 @@
     overflow: hidden;
     margin: 0 auto;
     padding: 30px 30px 10px; }
-    .remodal .modal-content .background-image {
-      width: 60%;
-      max-width: 400px;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 3vh; }
     .remodal .modal-content h1 {
       text-align: center;
       font-size: 1rem; }
@@ -94,6 +88,51 @@
   background-image: url("../images/close-button-hover.svg");
   background-position: center; }
 
+.face-animation {
+  height: 80vh; }
+  .face-animation .ellis-face {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: .2;
+    animation-name: face;
+    animation-duration: 16s; }
+  .face-animation .text {
+    position: absolute;
+    height: 80vh;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .face-animation .text h1 {
+      background-color: #ff3333;
+      padding: 30px 40px;
+      font-size: 1.1rem;
+      color: white;
+      max-width: 500px;
+      line-height: 1.7rem;
+      transition: background-color .2s ease-in-out; }
+      .face-animation .text h1 span {
+        text-transform: none; }
+    .face-animation .text .first {
+      display: none; }
+    .face-animation .text .second {
+      display: none; }
+    .face-animation .text .first:hover {
+      cursor: pointer;
+      background-color: black; }
+
+@keyframes face {
+  0% {
+    opacity: 1; }
+  12% {
+    opacity: 1; }
+  18% {
+    opacity: .2; }
+  100% {
+    opacity: .2; } }
 @media (min-width: 767px) {
   .remodal .modal-content {
     padding: 30px 50px 10px; }
@@ -109,7 +148,10 @@
       float: right;
       width: 35%; }
     .remodal .modal-content .column-right2 img {
-      width: 48%; } }
+      width: 48%; }
+  .remodal .face-animation .ellis-face {
+    width: 75%;
+    left: 12.5%; } }
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
   margin: 0;
   padding: 0;

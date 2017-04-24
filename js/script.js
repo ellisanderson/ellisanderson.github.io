@@ -4,6 +4,29 @@ $(document).ready(function(){
 
 
 
+
+// Face Animation
+$(document).ready(function(){
+  $('#am').click(function(){
+    $('.first').delay(3000).fadeIn();
+
+    $('.first').click(function(){
+      $('.second').fadeIn();
+      $('.first').hide();
+    });
+
+    // $('.second').click(function(){
+    //   $('.second').fadeOut();
+    // });
+
+    $('.remodal-close3').click(function(){
+      $('.first, .second').hide();
+    });
+  });
+});
+
+
+
 $(document).ready(function(){
   $('.section-header').click(function(){
     // Open this section, close all other sections
