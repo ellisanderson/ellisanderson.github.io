@@ -30,7 +30,7 @@
     }
 
     h1{
-      margin: 0 10%;
+      // margin: 0 5%;
       text-align: center;
       font-size: 1rem;
       // font-weight: 100;
@@ -45,6 +45,10 @@
     a{
       color:$color9;
       font-weight: 900;
+    }
+
+    a:hover{
+      color:black;
     }
 
 
@@ -62,7 +66,7 @@
         width: 98%;
         float: left;
         margin: 1%;
-        margin-bottom:20px;
+        // margin-bottom:20px;
         border: 1px solid #ddd;
       }
     }
@@ -104,7 +108,9 @@
 }
 
 .remodal-close2{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   margin-top: 30px;
   width: 50px;
@@ -136,9 +142,9 @@
       padding:30px 50px 10px;
 
       h1{
-        width: 550px;
+        width: 525px;
         margin: 0 auto;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
 
       .column-left{

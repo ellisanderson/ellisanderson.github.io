@@ -22,7 +22,6 @@
       margin: 0 auto;
       margin-bottom: 3vh; }
     .remodal .modal-content h1 {
-      margin: 0 10%;
       text-align: center;
       font-size: 1rem; }
       .remodal .modal-content h1 span {
@@ -30,6 +29,8 @@
     .remodal .modal-content a {
       color: #ff3333;
       font-weight: 900; }
+    .remodal .modal-content a:hover {
+      color: black; }
     .remodal .modal-content .column-left {
       padding-bottom: 30px;
       width: 100%; }
@@ -40,7 +41,6 @@
         width: 98%;
         float: left;
         margin: 1%;
-        margin-bottom: 20px;
         border: 1px solid #ddd; }
     .remodal .modal-content .column-right2 {
       width: 100%;
@@ -60,7 +60,9 @@
   padding: 20px; }
 
 .remodal-close2 {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   margin-top: 30px;
   width: 50px;
@@ -84,9 +86,9 @@
   .remodal .modal-content {
     padding: 30px 50px 10px; }
     .remodal .modal-content h1 {
-      width: 550px;
+      width: 525px;
       margin: 0 auto;
-      font-size: 1.7rem; }
+      font-size: 1.5rem; }
     .remodal .modal-content .column-left {
       float: left;
       width: 65%;
@@ -131,9 +133,6 @@ p {
 a {
   text-decoration: none;
   color: inherit; }
-
-a:hover {
-  color: #ff3333; }
 
 .flex {
   display: flex; }
@@ -182,7 +181,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px; }
+    padding: 0 5%; }
   header .left {
     display: flex;
     align-items: center;
@@ -239,7 +238,7 @@ header {
 .portfolio {
   margin: 100px auto 10px;
   max-width: 900px;
-  padding: 0 15px 0px; }
+  padding: 0 5%; }
 
 section {
   display: none;
@@ -256,7 +255,8 @@ section {
   justify-content: space-between;
   transition: background-color .2s ease-in-out; }
   .section-header h2 {
-    font-size: 1.2rem; }
+    font-size: 1rem;
+    font-weight: 400; }
   .section-header h2:last-child {
     display: none; }
 
@@ -264,7 +264,9 @@ section {
   border: none; }
 
 .section-header:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #ff3333;
+  color: white; }
 
 .content {
   display: none;
@@ -295,7 +297,8 @@ section {
       display: block; }
 
   .section-header h2 {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: 100; }
 
   .portfolio {
     margin-top: 160px; }
