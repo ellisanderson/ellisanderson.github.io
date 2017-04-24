@@ -126,6 +126,11 @@
   transition: background-color .2s ease-in-out;
 }
 
+.remodal-close2::after{
+  content: "x";
+}
+
+
 .remodal-close2:hover{
   background-color: black;
   color: white;
