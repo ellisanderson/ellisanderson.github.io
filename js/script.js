@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('section').fadeIn(0).css('display','block');
+  $('section').fadeIn(500).css('display','block');
 });
 
 
@@ -7,25 +7,23 @@ $(document).ready(function(){
 
 // Face Animation
 $(document).ready(function(){
-  $('#am').click(function(){
-    // $('.remodal-overlay').delay(2000).css('background-color','#ff3333');
-    $('.text, .first').delay(2000).fadeIn(1000);
 
+  $(document).on('opened', '.remodal', function () {
+    $('.text, #first').delay(500).fadeIn();
+  });
 
+  $('.next').click(function(){
+    $(this).parent().fadeOut(500);
+    $(this).parent().next().delay(500).fadeIn(500);
+  });
 
-    $('.right').click(function(){
-      $('.second').fadeIn();
-      $('.first').fadeOut();
-    });
+  $('.prev').click(function(){
+    $(this).parent().fadeOut(500);
+    $(this).parent().prev().delay(500).fadeIn(500);
+  });
 
-    $('.left').click(function(){
-      $('.first').fadeIn();
-      $('.second').fadeOut();
-    });
-
-    $('.remodal-close3').click(function(){
-      $('.first, .second').fadeOut(600);
-    });
+  $('.remodal-close3').click(function(){
+    $('.text, #first, #second, #third, #fourth').fadeOut(600);
   });
 });
 

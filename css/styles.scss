@@ -209,10 +209,12 @@ header{
 section{
   display: none;
   border-bottom:1px solid black;
+  max-width: 900px;
 }
 
 .section-header{
-  width: 100%;
+  // width: 100%;
+  max-width: 900px;
   height: 10vh;
   min-height: 50px;
   padding: 0 15px;
