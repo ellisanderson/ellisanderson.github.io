@@ -238,14 +238,15 @@ a {
   background-color: black;
   color: white; }
 
+.selected {
+  background-color: #ff3333;
+  color: white; }
+
 .italic {
   font-style: italic; }
 
 .transparent {
   background-color: transparent; }
-
-.border {
-  border: 5px solid red; }
 
 header {
   height: 100px;

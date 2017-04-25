@@ -86,6 +86,11 @@ a{
   color:white;
 }
 
+.selected{
+  background-color: $color9;
+  color:white;
+}
+
 .italic{
   font-style: italic;
 }
@@ -94,9 +99,6 @@ a{
   background-color: transparent;
 }
 
-.border{
-  border:5px solid red;
-}
 
 header{
   height: 100px;

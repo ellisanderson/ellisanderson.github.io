@@ -12,7 +12,7 @@ $(document).ready(function(){
     $('.text, #first').delay(500).fadeIn();
   });
 
-  $('.next, h1').click(function(){
+  $('.next').click(function(){
     $(this).parent().fadeOut(500);
     $(this).parent().next().delay(500).fadeIn(500);
   });
@@ -35,8 +35,8 @@ $(document).ready(function(){
     $(this).next().slideToggle(500);
     $('.content').not($(this).next()).slideUp(500);
     // Add black and italic classes to this section, remove those classes from the other sections
-    $(this).toggleClass('black italic');
-    $('.section-header').not($(this)).removeClass('black italic');
+    $(this).toggleClass('selected italic');
+    $('.section-header').not($(this)).removeClass('selected italic');
     // Toggle the up/down arrows on this section, return the arrows to default state on the other sections
     $(this).children('.section-header h2:nth-child(3), .section-header h2:nth-child(4)').toggle();
     $('.section-header h2:nth-child(3)').not($(this).children('.section-header h2:nth-child(3)')).show();
