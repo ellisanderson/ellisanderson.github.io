@@ -46,8 +46,6 @@ $(document).ready(function(){
 
 
 
-
-
 $(document).ready(function(){
   $('#light-switch').click(function(){
     $('body').toggleClass('black');
@@ -55,21 +53,6 @@ $(document).ready(function(){
     $('.orbs, .walking, .portfolio,  h1, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
   });
 });
-
-
-
-
-
-// $(document).ready(function(){
-//   window.sr = ScrollReveal();
-//   sr.reveal('section', { duration: 2000 });
-// });
-
-
-
-
-
-
 
 
 
@@ -95,8 +78,6 @@ $(document).ready(function(){
 
 
 
-
-
 $(document).ready(function(){
   $('.left').click(function(){
     // Slide everything up to show original menu
@@ -105,71 +86,10 @@ $(document).ready(function(){
     $('.section-header h2:nth-child(3)').show();
     $('.section-header h2:nth-child(4)').hide();
     // Remove black class
-    $('.section-header').removeClass('black italic');
+    $('.section-header').removeClass('selected italic');
   });
 });
 
-
-
-
-// $(document).ready(function(){
-//
-//   var modal = document.querySelector('.modal');
-//   var btn = document.querySelector('#hamburger');
-//
-//   btn.onclick = function() {
-//     modal.style.display = "flex";
-//   }
-//
-//   window.onclick = function(event){
-//     if(event.target == modal){
-//       modal.style.display = "none";
-//     };
-//   };
-// });
-
-
-
-
-
-// MY LIGHTBOX SCRIPT (DOESN'T WORK!!!!)
-// $(document).ready(function(){
-//
-//   $('.lightbox_trigger').click(function(e){
-//
-//     e.preventDefault();
-//
-//     var image_href = $(this).attr("href");
-//
-//     if($('#mylightbox').length > 0){
-//       $('#content').html('<img src=' + image_href + '" />');
-//
-//       $('#mylightbox').show();
-//     }
-//
-//     else{
-//       var lightbox =
-//       '<div id="mylightbox">' + '<p>Click to close</p>' + '<div id="content">' + '<img src="' + image_href + '" />' + '</div>';
-//
-//       $('body').append(lightbox);
-//     }
-//
-//     console.log('hey');
-//
-//   });
-//
-//   $('#mylightbox').on('click', function(){
-//     $('#mylightbox').hide();
-//   });
-// });
-
-
-
-
-
-
-
-// ----------------------------------------------------------------
 
 
 $(document).ready(function(){
@@ -177,41 +97,3 @@ $(document).ready(function(){
     'disableScrolling' : true
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function(){
-//
-//   $('#co').click(function() {
-//     $('html, body').animate({
-//             scrollTop: $('#coffee').offset().top -80
-//           }, 700);
-//   });
-//
-//   $('#gr').click(function() {
-//     $('html, body').animate({
-//             scrollTop: $('#goodreads').offset().top -80
-//           }, 700);
-//   });
-//
-//   $('#np').click(function() {
-//     $('html, body').animate({
-//             scrollTop: $('#nonprofit').offset().top -80
-//           }, 700);
-//   });
-//
-//   $('#tu').click(function() {
-//     $('html, body').animate({
-//             scrollTop: $('#third-uncle').offset().top -80
-//           }, 700);
-//   });
-//
-// });
