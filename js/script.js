@@ -23,7 +23,7 @@ $(document).ready(function(){
   });
 
   $('.remodal-close3').click(function(){
-    $('.text, #first, #second, #third, #fourth').fadeOut(600);
+    $('.text, .blurb').fadeOut(600);
   });
 });
 

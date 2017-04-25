@@ -162,21 +162,22 @@
     display: none;
     background-color: rgba(255,51,51,.9);
 
-    #first, #second, #third, #fourth{
+    .blurb{
       display: none;
       position: absolute;
-      bottom:40vh;
+      bottom:20vh;
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       text-align: center;
-      font-size: 1.1rem;
+      // font-size: 1.3rem;
       color: white;
       line-height: 1.7rem;
       transition: background-color .2s ease-in-out;
     }
 
     h1{
+      font-size: 1.2rem;
       padding: 0 10%;
 
       span{
@@ -279,8 +280,13 @@
 
   .face-animation{
     .text{
+
+      .blurb{
+        bottom:40vh;
+      }
+
       h1{
-        padding:0;
+        padding:0%;
       }
     }
   }
