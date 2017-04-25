@@ -12,7 +12,7 @@ $(document).ready(function(){
     $('.text, #first').delay(500).fadeIn();
   });
 
-  $('.next').click(function(){
+  $('.next, h1').click(function(){
     $(this).parent().fadeOut(500);
     $(this).parent().next().delay(500).fadeIn(500);
   });
