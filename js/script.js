@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('section').fadeIn(2000).css('display','block');
+  $('section').fadeIn(0).css('display','block');
 });
 
 
@@ -8,19 +8,23 @@ $(document).ready(function(){
 // Face Animation
 $(document).ready(function(){
   $('#am').click(function(){
-    $('.first').delay(3000).fadeIn();
+    // $('.remodal-overlay').delay(2000).css('background-color','#ff3333');
+    $('.text, .first').delay(2000).fadeIn(1000);
 
-    $('.first').click(function(){
+
+
+    $('.right').click(function(){
       $('.second').fadeIn();
-      $('.first').hide();
+      $('.first').fadeOut();
     });
 
-    // $('.second').click(function(){
-    //   $('.second').fadeOut();
-    // });
+    $('.left').click(function(){
+      $('.first').fadeIn();
+      $('.second').fadeOut();
+    });
 
     $('.remodal-close3').click(function(){
-      $('.first, .second').hide();
+      $('.first, .second').fadeOut(600);
     });
   });
 });

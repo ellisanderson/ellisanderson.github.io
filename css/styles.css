@@ -1,5 +1,6 @@
 .remodal-overlay {
-  background-color: white; }
+  background-color: white;
+  transition: background-color 3s ease; }
 
 .remodal-wrapper {
   padding: 0; }
@@ -14,7 +15,7 @@
   .remodal .modal-content {
     overflow: hidden;
     margin: 0 auto;
-    padding: 30px 30px 10px; }
+    padding: 110px 30px 10px; }
     .remodal .modal-content h1 {
       text-align: center;
       font-size: 1rem; }
@@ -77,65 +78,75 @@
   cursor: pointer; }
 
 .remodal-close3 {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -25px;
   width: 50px;
   height: 50px;
-  margin: 30px auto 0;
-  background-image: url("../images/close-button.svg");
-  background-position: center; }
+  background-image: url("../images/close-button-hover.svg");
+  background-position: center;
+  transition: opacity .2s ease-in-out;
+  z-index: 10000; }
 
 .remodal-close3:hover {
   cursor: pointer;
-  background-image: url("../images/close-button-hover.svg");
+  opacity: .5;
   background-position: center; }
 
 .face-animation {
-  height: 80vh; }
-  .face-animation .ellis-face {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    opacity: .2;
-    animation-name: face;
-    animation-duration: 16s; }
+  height: 100vh;
+  width: 200%;
+  position: fixed;
+  left: -50%;
+  background: url("../images/ellis2.gif") center no-repeat;
+  background-size: 35%; }
   .face-animation .text {
-    position: absolute;
-    height: 80vh;
-    width: 80%;
-    left: 10%;
+    z-index: 1;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .face-animation .text h1 {
-      background-color: #ff3333;
-      padding: 30px 40px;
+    height: 100vh;
+    display: none;
+    background-color: #ff3333; }
+    .face-animation .text .first, .face-animation .text .second {
+      display: none;
       font-size: 1.1rem;
       color: white;
-      max-width: 500px;
+      padding: 40vh 30%;
       line-height: 1.7rem;
       transition: background-color .2s ease-in-out; }
-      .face-animation .text h1 span {
-        text-transform: none; }
-    .face-animation .text .first {
-      display: none; }
-    .face-animation .text .second {
-      display: none; }
-    .face-animation .text .first:hover {
-      cursor: pointer;
-      background-color: black; }
+    .face-animation .text .right p {
+      position: absolute;
+      bottom: 10vh;
+      right: 30%;
+      color: white;
+      font-size: 2rem;
+      animation-name: pulse;
+      animation-duration: .5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear; }
+    .face-animation .text .left p {
+      position: absolute;
+      bottom: 10vh;
+      left: 30%;
+      color: white;
+      font-size: 2rem;
+      animation-name: pulse;
+      animation-duration: .5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear; }
+    .face-animation .text .left p:hover, .face-animation .text .right p:hover {
+      cursor: hover; }
 
-@keyframes face {
+@keyframes pulse {
   0% {
-    opacity: 1; }
-  12% {
-    opacity: 1; }
-  18% {
-    opacity: .2; }
+    font-size: 2rem; }
   100% {
-    opacity: .2; } }
+    font-size: 2.2rem; } }
 @media (min-width: 767px) {
   .remodal .modal-content {
-    padding: 30px 50px 10px; }
+    padding: 110px 50px 10px; }
     .remodal .modal-content h1 {
       width: 525px;
       margin: 0 auto;
@@ -148,10 +159,7 @@
       float: right;
       width: 35%; }
     .remodal .modal-content .column-right2 img {
-      width: 48%; }
-  .remodal .face-animation .ellis-face {
-    width: 75%;
-    left: 12.5%; } }
+      width: 48%; } }
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, hr {
   margin: 0;
   padding: 0;
