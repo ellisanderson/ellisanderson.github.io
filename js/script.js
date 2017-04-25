@@ -85,7 +85,7 @@ $(document).ready(function(){
     // Toggle down/up arrows
     $('.section-header h2:nth-child(3)').show();
     $('.section-header h2:nth-child(4)').hide();
-    // Remove black class
+    // Remove selected class
     $('.section-header').removeClass('selected italic');
   });
 });
