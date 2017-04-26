@@ -274,9 +274,14 @@ section{
     flex-direction: column;
     letter-spacing: .1rem;
     text-align: center;
-    padding:10px;
+    // padding:10px;
     text-transform: uppercase;
     line-height: 1.3rem;
+    // background-color: orange;
+
+    span{
+      font-size: .7rem;
+    }
   }
 
   .project:hover{
@@ -325,7 +330,7 @@ section{
 
   .project-list{
     .project{
-      padding:50px;
+      // padding:50px;
       height: 80px;
       width: 33.333%;
       float: left;
