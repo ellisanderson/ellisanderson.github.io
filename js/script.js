@@ -1,6 +1,6 @@
-$(document).ready(function(){
-  $('section').fadeIn(500).css('display','block');
-});
+// $(document).ready(function(){
+//   $('section').fadeIn(500).css('display','block');
+// });
 
 
 
@@ -50,7 +50,8 @@ $(document).ready(function(){
   $('#light-switch').click(function(){
     $('body').toggleClass('black');
     $('header').toggleClass('transparent');
-    $('.orbs, .walking, .portfolio,  h1, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
+    $('.orbs, .portfolio,  h1, .fa-moon-o, .fa-sun-o, #eye1, #eye2').toggle();
+    $('.walking').toggleClass('opacity-one');
   });
 });
 
